@@ -24,11 +24,7 @@ function romanNumber(number) {
 }
 
 function parseTime(time) {
-    var numbers = time.split(':').map(Number);
-    var hours = numbers[0];
-    var minutes = numbers[1];
-
-    return [hours, minutes];
+    return time.split(':').map(Number);
 }
 
 function isValidFormat(time) {
