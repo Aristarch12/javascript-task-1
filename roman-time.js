@@ -8,11 +8,9 @@ function romanTime(time) {
     if (!isValidFormat(time)) {
         throw new TypeError('invalid time format');
     }
-    var [hours, minutes] = parseTime(time);
-    var romanHours = romanNumber(hours);
-    var romanMinutes = romanNumber(minutes);
+    let parsedTime = parseTime(time);
 
-    return `${romanHours}:${romanMinutes}`;
+    return parsedTime.map(romanNumber).join(':');
 }
 
 function romanNumber(number) {
